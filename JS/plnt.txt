@@ -1,0 +1,6 @@
+1- desine
+2- data
+3- select design elements 
+4- display first meal
+5- How to fet random meal( ازاي اعرض حاجة بعشوائية)
+6- 

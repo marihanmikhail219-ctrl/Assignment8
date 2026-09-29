@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+</head>
+<body> 
+<bg-remote bg-remote text-light></bg-remote>
+
+
+<!--nav-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+            <div class="logo">
+                <i class="fa-solid fa-utensils"></i> 
+            </div>
+            <div class="ms-3">
+              <h2 class="mb-0">What's For Dinner</h2>
+              <p class="mb-0">Your daily meal inspiration</p>
+            </div>
+            </a>
+            <div class="d-flex align-items-center gap-4">
+            <i class="fa-solid fa-bookmark nav-icon"></i>
+            <i class="fa-solid fa-clock-rotate-left nav-icon"></i>
+            <i class="fa-solid fa-gear nav-icon"></i>
+
+            <img src="./Imgs/image.png" alt="Profile" class="profile-img">
+            </div>
+  </div>   
+</nav>
+<!--nav end-->
+<!--home-->
+ <div class="home">
+  <div class="contiener mt-5">
+    <div class="row rounded-4 overflow-hidden bg-white">
+    <!--img-->
+      <div class="col-md-5 p-0">
+      <div class="img h-100 object-fit-cover position-relative">
+        <span class="reviwes position-absolute top-0 start-0 m-3 bg-white rounded-pill px-3 py-1">
+          <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+          4.8(234 reviews)
+        </span>
+
+
+        <div style="left: 20px; right: 20px; bottom: 20px;" class="info position-absolute rounded-3 bg-white text-center"> 
+        <div class="row">
+          <div class="col-4">
+            <i style="color: orange;" class="fa-solid fa-clock"></i>
+            <p>Prep Time</p>
+            <p>30 min</p>
+          </div>
+
+          <div class="col-4">
+            <i style="color: red;" class="fa-solid fa-fire-burner"></i>
+            <p>Cook Time</p>
+            <p>60 min</p>
+          </div>
+
+          <div class="col-4">
+            <i style="color: blue;"  class="fa-solid fa-users"></i>
+            <p>Serves</p>
+            <p>4 People</p>
+          </div>
+        </div>
+        </div>
+        <img class="w-100 h-100" 
+        src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800&auto=format&fit=crop"
+        alt="hero">
+      </div>
+    </div>
+    <!--content-->
+    <div class="col-md-7">
+      <div class="inner d-flex flex-column gap-3 py-3">
+        <!--tags-->
+        <div class="tags">
+          <span class="badge text-bg-primary">Intermediate</span>
+          <span class="badge text-bg-success">Mediterranean</span>
+        </div>
+        <!--title-->
+        <h1>Greek Moussaka</h1>
+        <!--description-->
+        <p>Traditional layered eggplant casserole with lamb</p>
+        
+        <!--warning-->
+        <div class="warning d-flex align-items-center gap-3 alert alert-danger">
+          <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <div class="txt">
+            <h5>Extended Preparation Time</h5>
+            <p>This recipe requires more than 45 minutes to prepare. Plan accordingly!</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    </div>
+  </div>
+
+<!--navs and tags-->
+ <ul class="nav nav-tabs" id="myTab" role="tablist">
+ <!--Ingredients-->
+  <li class="nav-item" role="presentation">
+    <button 
+    class="nav-link active"
+     id="home-tab" 
+     data-bs-toggle="tab" 
+     data-bs-target="#home-tab-pane" 
+     type="button" 
+     role="tab" 
+     aria-controls="home-tab-pane" 
+     aria-selected="true">Ingredients</button>
+  </li>
+  <!--Instructions-->
+  <li class="nav-item" role="presentation">
+    <button 
+    class="nav-link" 
+    id="profile-tab" 
+    data-bs-toggle="tab" 
+    data-bs-target="#profile-tab-pane" 
+    type="button" 
+    role="tab" 
+    aria-controls="profile-tab-pane" 
+    aria-selected="false">Instructions</button>
+  </li>
+  <!--Nutrition-->
+  <li class="nav-item" role="presentation">
+    <button 
+    class="nav-link" 
+    id="contact-tab" 
+    data-bs-toggle="tab" 
+    data-bs-target="#contact-tab-pane" 
+    type="button" 
+    role="tab" 
+    aria-controls="contact-tab-pane" 
+    aria-selected="false">Nutrition</button>
+  </li>
+  <!--Chef's Tips-->
+  <li class="nav-item" role="presentation">
+    <button 
+    class="nav-link" 
+    id="disabled-tab" 
+    data-bs-toggle="tab" 
+    data-bs-target="#disabled-tab-pane" 
+    type="button" 
+    role="tab" 
+    aria-controls="disabled-tab-pane" 
+    aria-selected="false">Chef's Tips</button>
+  </li>
+</ul>
+
+  
+<div class="tab-content" id="myTabContent">
+  <!--Ingredients-->
+  <div 
+ class="tab-pane fade show active" 
+ id="home-tab-pane" 
+ role="tabpanel" 
+ aria-labelledby="home-tab" 
+ tabindex="0"> 
+  <div style="background: antiquewhite;" class="rounded-3">
+    <ul class="list-unstyled d-flex flex-column g-2 p-3">
+      <li class="d-flex">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-circle" 
+        style="width: 30px; height: 30px; background: orange; color: white;">1</span>
+        3 large eggplants, sliced
+      </li>
+      <li class="d-flex">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-circle" 
+        style="width: 30px; height: 30px; background: orange; color: white;">2</span>
+        500g ground lamb
+      </li>
+      <li class="d-flex">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-circle" 
+        style="width: 30px; height: 30px; background: orange; color: white;">3</span>
+        400g canned tomatoes
+      </li>
+      <li class="d-flex">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-circle" 
+        style="width: 30px; height: 30px; background: orange; color: white;">4</span>
+        1 onion, diced
+      </li>
+      <li class="d-flex">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-circle" 
+        style="width: 30px; height: 30px; background: orange; color: white;">5</span>
+        43 cloves garlic, minced
+      </li>
+      <li class="d-flex">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-circle" 
+        style="width: 30px; height: 30px; background: orange; color: white;">6</span>
+        500ml béchamel sauce
+      </li>
+      <li class="d-flex">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-circle" 
+        style="width: 30px; height: 30px; background: orange; color: white;">7</span>
+        100g parmesan cheese
+      </li>
+      <li class="d-flex">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-circle" 
+        style="width: 30px; height: 30px; background: orange; color: white;">8</span>
+        Cinnamon and oregano
+      </li>
+      <li class="d-flex">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-circle" 
+        style="width: 30px; height: 30px; background: orange; color: white;">9</span>
+        Olive oil
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!--Instructions-->
+<div 
+class="tab-pane fade" 
+id="profile-tab-pane" 
+role="tabpanel" 
+aria-labelledby="profile-tab" 
+tabindex="0"> 
+<div style="background: white;" class="rounded-3">
+    <ul class="list-unstyled d-flex flex-column g-2 p-3">
+      <li class="d-flex align-items-center">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-4" 
+        style="width: 50px; height: 50px; background: orange; color: white;">1</span>
+        Slice eggplants, salt them, and let sit for 30 minutes. Rinse and pat dry.
+      </li>
+      <li class="d-flex align-items-center">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-4" 
+        style="width: 50px; height: 50px; background: orange; color: white;">2</span>
+        Brush eggplant slices with olive oil, grill or bake until softened.
+      </li>
+      <li class="d-flex align-items-center">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-4" 
+        style="width: 50px; height: 50px; background: orange; color: white;">3</span>
+        Cook ground lamb with onion and garlic. Add tomatoes, cinnamon, oregano. Simmer 20 minutes.
+      </li>
+      <li class="d-flex align-items-center">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-4" 
+        style="width: 50px; height: 50px; background: orange; color: white;">4</span>
+        Preheat oven to 180°C (350°F).
+      </li>
+      <li class="d-flex align-items-center">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-4" 
+        style="width: 50px; height: 50px; background: orange; color: white;">5</span>
+        Layer in baking dish: eggplant, meat sauce, eggplant, meat sauce. Top with béchamel and parmesan.
+      </li>
+      <li class="d-flex align-items-center">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-4" 
+        style="width: 50px; height: 50px; background: orange; color: white;">6</span>
+        Bake for 45 minutes until golden. Let rest 15 minutes before serving.
+      </li>
+    </ul>
+  </div>
+</div>
+   
+  <!--Nutrition-->
+  <div 
+  class="tab-pane fade" 
+  id="contact-tab-pane" 
+  role="tabpanel" 
+  aria-labelledby="contact-tab" 
+  tabindex="0">
+ 
+     <div class="row g-3">
+    <div class="col-6">
+        <div class="bg-secondary-subtle p-3 rounded-3 d-flex justify-content-between align-items-center"> 
+            <div class="icon">
+                <span style="color: red;">
+                    <i class="fa-solid fa-fire"></i>
+                </span>
+                Calories
+            </div>
+            <div class="value">
+                580 kcal
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="bg-secondary-subtle p-3 rounded-3 d-flex justify-content-between align-items-center">     
+            <div class="icon">
+                <span style="color: red;">
+                    <i class="fa-solid fa-fire"></i>
+                </span>
+                Calories
+            </div>
+            <div class="value">
+                580 kcal
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-6">
+        <div class="bg-secondary-subtle p-3 rounded-3 d-flex justify-content-between align-items-center"> 
+            <div class="icon">
+                <span style="color: red;">
+                    <i class="fa-solid fa-fire"></i>
+                </span>
+                Calories
+            </div>
+            <div class="value">
+                580 kcal
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="bg-secondary-subtle p-3 rounded-3 d-flex justify-content-between align-items-center">     
+            <div class="icon">
+                <span style="color: red;">
+                    <i class="fa-solid fa-fire"></i>
+                </span>
+                Calories
+            </div>
+            <div class="value">
+                580 kcal
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-6">
+        <div class="bg-secondary-subtle p-3 rounded-3 d-flex justify-content-between align-items-center"> 
+            <div class="icon">
+                <span style="color: red;">
+                    <i class="fa-solid fa-fire"></i>
+                </span>
+                Calories
+            </div>
+            <div class="value">
+                580 kcal
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="bg-secondary-subtle p-3 rounded-3 d-flex justify-content-between align-items-center">     
+            <div class="icon">
+                <span style="color: red;">
+                    <i class="fa-solid fa-fire"></i>
+                </span>
+                Calories
+            </div>
+            <div class="value">
+                580 kcal
+            </div>
+        </div>
+    </div>
+</div>
+  </div>
+
+<!--Chef's Tips-->
+  <div 
+  class="tab-pane fade" 
+  id="disabled-tab-pane" 
+  role="tabpanel" 
+  aria-labelledby="disabled-tab" 
+  tabindex="0">
+  <div class="rounded-3"> 
+    <ul class="list-unstyled d-flex flex-column gap-2 p-3">
+      <li style="background-color: whitesmoke; border-left: 2px solid orange;" class=" align-items-center d-flex rounded-3">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-circle" 
+        style="width: 20px; height: 20px; background: orange; color: white;"><i class="fa-solid fa-check"></i></span>
+        Use chicken thighs for juicier meat
+      </li>
+    </ul>
+  </div>
+  <div class="rounded-3"> 
+    <ul class="list-unstyled d-flex flex-column gap-2 p-3">
+      <li style="background-color: whitesmoke; border-left: 2px solid orange;" class=" align-items-center d-flex rounded-3">
+        <span 
+        class="d-flex align-items-center justify-content-around me-2 rounded-circle" 
+        style="width: 20px; height: 20px; background: orange; color: white;"><i class="fa-solid fa-check"></i></span>
+        Use chicken thighs for juicier meat
+      </li>
+    </ul>
+  </div>
+</div>
+
+<button class="btn btn-success"><i class="fa-solid fa-rotate"></i> Try Another Recipe</button>
+</div>
+</div>
+  
+  
+ 
+
+ 
+  
+
+
+
+ 
+
+
+ <!--Home end-->
+
+  <script src="./JS/bootstrap.bundle.min.js"></script>
+<script src="./JS/main.js"></script>   
+</body>
+</html>
